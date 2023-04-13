@@ -3,7 +3,7 @@ on: [push]
 jobs:
   check-version:
     runs-on: 
-      - bharat
+      - self-hosted
       - javaversion
     steps:
       - uses: actions/checkout@v3
