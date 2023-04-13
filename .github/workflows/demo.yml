@@ -1,8 +1,11 @@
-name: hostname
-on: push
+name: learn-github-actions
+on: [push]
 jobs:
-  my-job:
-    runs-on: ubuntu-latest
+  check-ubuntu-version:
+    runs-on: 
+      - self-hosted
+      - label-1
     steps:
-      - name: my-step
-        run: echo "Hello World!"
+      - uses: actions/checkout@v3
+      - run: uname -m
+      - run: docker -v
