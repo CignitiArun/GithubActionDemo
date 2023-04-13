@@ -1,0 +1,11 @@
+name: learn-github-actions
+on: [push]
+jobs:
+  check-ubuntu-version:
+    runs-on: 
+      - self-hosted
+      - label-1
+    steps:
+      - uses: actions/checkout@v3
+      - run: node -v
+      - run: java -version
