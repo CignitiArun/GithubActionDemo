@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: demo github actions
 #on: [push]
 on:
   push:
@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
 jobs:
-  check-ubuntu-version:
+  ubuntu:
     runs-on: 
       - self-hosted
       - label-1
@@ -14,7 +14,22 @@ jobs:
       - uses: actions/checkout@v3
       - run: uname -m
       - run: docker -v
-      - run: mkdir gitcode
-      - run: cd gitcode
       - run: ls
       - run: git pull origin main
+      - run: |
+             cat test1
+             cat test2
+  windows:
+    runs-on: 
+      - self-hosted
+      - javaversion
+    steps:
+      - uses: actions/checkout@v3
+      - run: uname -m
+      - run: docker -v
+      - run : dir
+      - run: git pull origin main
+      - run : |
+              type test3
+              type test4
+              type test5
