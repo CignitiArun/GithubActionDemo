@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: uname -m
-      - run: docker -v
+      - run: java -version
       - run : dir
       - run: git pull origin main
       - run : |
