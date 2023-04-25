@@ -19,7 +19,7 @@ jobs:
       - run: |
              cat test1
              cat test2
-  windows:
+  pubuntu:
     runs-on: 
       - self-hosted
       - javaversion
@@ -30,6 +30,6 @@ jobs:
       - run : dir
       - run: git pull origin main
       - run : |
-              type test3
-              type test4
-              type test5
+              cat test3
+              cat test4
+              cat test5
