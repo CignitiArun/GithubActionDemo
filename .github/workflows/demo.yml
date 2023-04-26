@@ -19,6 +19,7 @@ jobs:
       - run: |
              cat test1
              cat test2
+             cat test3
   pubuntu:
     runs-on: 
       - self-hosted
@@ -30,6 +31,5 @@ jobs:
       - run : dir
       - run: git pull origin main
       - run : |
-              cat test3
               cat test4
               cat test5
