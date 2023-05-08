@@ -1,0 +1,13 @@
+org\example\pojos\package-info.class
+org\example\pojos\Calculator.class
+org\example\pojos\ObjectFactory.class
+org\example\pojos\Subtract.class
+org\example\pojos\Divide.class
+org\example\pojos\Multiply.class
+org\example\utils\Constants.class
+org\example\pojos\SubtractResponse.class
+org\example\pojos\AddResponse.class
+org\example\pojos\MultiplyResponse.class
+org\example\pojos\DivideResponse.class
+org\example\pojos\CalculatorSoap.class
+org\example\pojos\Add.class
