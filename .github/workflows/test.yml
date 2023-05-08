@@ -18,10 +18,14 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: mvn clean install -DskipTests=true
+        run: |
+             cd democalculator
+             mvn clean install -DskipTests=true
 
       - name: Run tests in parallel
-        run: mvn verify -Dcucumber.parallel.threads=3 -Dcucumber.filter.tags="@smoke" -Dcucumber.features=src/test/resources --plugin com.github.temyers:cucumber-jvm-parallel-plugin:5.0.0:generateRunners
+        run: |
+            cd democalculator
+            mvn verify -Dcucumber.parallel.threads=3 -Dcucumber.filter.tags="@smoke" -Dcucumber.features=src/test/resources --plugin com.github.temyers:cucumber-jvm-parallel-plugin:5.0.0:generateRunners
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
