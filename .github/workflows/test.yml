@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         runner:
-          - label -1
+          - label-1
           - javaversion
     runs-on: ${{ matrix.runner }}
     steps:
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Java
         uses: actions/setup-java@v2
         with:
-          java-version: 8
+          java-version: 11
         
       - name: Setup Maven Action
         uses: s4u/setup-maven-action@v2
