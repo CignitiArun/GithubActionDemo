@@ -1,1 +1,30 @@
+name: parallel tests
+#on: [push]
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  parallel-tests:
+    strategy:
+      matrix:
+        runner:
+          - label -1
+          - javaversion
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
+      - name: Install dependencies
+        run: mvn clean install -DskipTests=true
+
+      - name: Run tests in parallel
+        run: mvn verify -Dcucumber.parallel.threads=3 -Dcucumber.filter.tags="@smoke" -Dcucumber.features=src/test/resources --plugin com.github.temyers:cucumber-jvm-parallel-plugin:5.0.0:generateRunners
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: target/cucumber-reports
