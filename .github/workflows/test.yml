@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
              cd democalculator
-             mvn -B clean install -DskipTests=true --file pom.xml
+             mvn -B clean install --file pom.xml -DskipTests=true 
       - name: Run tests in parallel
         run: |
             cd democalculator
