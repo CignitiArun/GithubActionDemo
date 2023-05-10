@@ -20,7 +20,7 @@ jobs:
         with:
           distribution: temurin
           java-version: 11
-          cache: maven
+          java-package: jdk
       - name: Install dependencies
         run: |
              cd democalculator
