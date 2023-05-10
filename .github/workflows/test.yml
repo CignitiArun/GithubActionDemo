@@ -23,7 +23,7 @@ jobs:
           java-version: '11'        
           java-package: jdk
           server-id: github
-          settings-path: /usr/lib/jvm/java-11-openjdk-amd64
+          path: /usr/lib/jvm/java-11-openjdk-amd64
 
       - name: Check installed/cached Java version
         run: java -version
