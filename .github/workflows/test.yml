@@ -23,6 +23,11 @@ jobs:
           java-version: |
             8
             11
+      - name: Setup Maven Action    
+        uses: s4u/maven-settings-action@v2.8.0
+        with:
+          java-version: 11
+          maven-version: 3.6.3
       - name: Install dependencies
         run: |
              cd democalculator
