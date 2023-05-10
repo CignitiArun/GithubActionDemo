@@ -21,7 +21,7 @@ jobs:
         with:
           java-version: 11
       - name: Setup Maven Action
-        uses: uses: stCarolas/setup-maven@v4.5
+        uses: stCarolas/setup-maven@v4.5
         with:
           java-version: 11
           maven-version: 3.6.3
