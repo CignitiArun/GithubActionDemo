@@ -14,28 +14,16 @@ jobs:
           - javaversion
     
     runs-on: ${{ matrix.runner }}
-    env:
-      JAVA_HOME_11_X64: '/usr/lib/jvm/java-11-openjdk-amd64'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - name: Cache JDK
-        id: cache-jdk
-        uses: actions/cache@v3
-        with:
-          path: ${{ env.JAVA_HOME_11_X64 }}
-          key: ${{ matrix.runner }}-jdk-11
-          restore-keys: ${{ matrix.runner }}-jdk-
       - uses: actions/setup-java@v3
         with:
           distribution: liberica
           java-version: '11'        
           java-package: jdk
-          
-      - name: Check default Java version
-        run: |
-             java -version
-             echo $ENV
+          server-id: github
+          settings-path: /usr/lib/jvm/java-11-openjdk-amd64
 
       - name: Check installed/cached Java version
         run: java -version
