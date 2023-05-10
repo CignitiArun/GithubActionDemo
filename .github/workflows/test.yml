@@ -18,17 +18,17 @@ jobs:
         uses: actions/checkout@v3
       - uses: actions/setup-java@v3
         with:
-          distribution: temurin
-          java-version: 11
+          distribution: liberica
+          java-version: '11'        
           java-package: jdk
       - name: Install dependencies
         run: |
              cd democalculator
-             mvn --batch-mode --update-snapshots clean install -DskipTests=true
+             mvn clean install -DskipTests=true
       - name: Run tests in parallel
         run: |
             cd democalculator
-            mvn --batch-mode --update-snapshots verify -Dcucumber.parallel.threads=3 -Dcucumber.filter.tags="@smoke" -Dcucumber.features=src/test/resources --plugin com.github.temyers:cucumber-jvm-parallel-plugin:5.0.0:generateRunners
+            mvn verify -Dcucumber.parallel.threads=3 -Dcucumber.filter.tags="@smoke" -Dcucumber.features=src/test/resources --plugin com.github.temyers:cucumber-jvm-parallel-plugin:5.0.0:generateRunners
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
