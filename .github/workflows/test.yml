@@ -20,20 +20,16 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: 11
-      - name: Setup Maven Action
-        uses: s4u/setup-maven-action@v2.0.0
-        with:
-          java-version: 11
-          maven-version: 3.6.3
+      
       
       - name: Install dependencies
         run: |
              cd democalculator
-             mvn clean install -DskipTests=true
+             mvn -B clean install -DskipTests=true
       - name: Run tests in parallel
         run: |
             cd democalculator
-            mvn verify -Dcucumber.parallel.threads=3 -Dcucumber.filter.tags="@smoke" -Dcucumber.features=src/test/resources --plugin com.github.temyers:cucumber-jvm-parallel-plugin:5.0.0:generateRunners
+            mvn -B verify -Dcucumber.parallel.threads=3 -Dcucumber.filter.tags="@smoke" -Dcucumber.features=src/test/resources --plugin com.github.temyers:cucumber-jvm-parallel-plugin:5.0.0:generateRunners
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
