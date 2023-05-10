@@ -33,7 +33,9 @@ jobs:
           java-package: jdk
           
       - name: Check default Java version
-        run: java -version
+        run: |
+             java -version
+             $ENV:GITHUB_PATH
 
       - name: Check installed/cached Java version
         run: java -version
