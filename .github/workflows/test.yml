@@ -21,6 +21,7 @@ jobs:
           distribution: liberica
           java-version: '11'        
           java-package: jdk
+          targets: 'JDK_11;JAVA_HOME'
       - name: Install dependencies
         run: |
              cd democalculator
