@@ -23,10 +23,12 @@ jobs:
           java-version: '11'        
           java-package: jdk
           server-id: github
-          path: /usr/lib/jvm/java-11-openjdk-amd64
+          jdkFile: /usr/lib/jvm/java-11-openjdk-amd64
 
       - name: Check installed/cached Java version
-        run: java -version
+        run: |
+             java -version
+             echo $JAVA_HOME
       - name: Install dependencies
         run: |
              cd democalculator
