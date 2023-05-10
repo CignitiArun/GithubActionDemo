@@ -12,8 +12,7 @@ jobs:
         runner:
           - label-1
           - javaversion
-        env: |
-          JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+    
     runs-on: ${{ matrix.runner }}
     steps:
       - name: Checkout code
@@ -23,7 +22,6 @@ jobs:
           distribution: liberica
           java-version: '11'        
           java-package: jdk
-          targets: ${{env.JAVA_HOME}}
       - name: Install dependencies
         run: |
              cd democalculator
