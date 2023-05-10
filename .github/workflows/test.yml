@@ -14,6 +14,8 @@ jobs:
           - javaversion
     
     runs-on: ${{ matrix.runner }}
+    env:
+      JAVA_HOME_11_X64: '/usr/lib/jvm/java-11-openjdk-amd64'
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -22,11 +24,18 @@ jobs:
           distribution: liberica
           java-version: '11'        
           java-package: jdk
+          
+      - name: Check default Java version
+        run: java -version
+
+      - name: Set installed/cached Java path [${{ env.JAVA_HOME_11_X64 }}]
+        run: echo "${{ env.JAVA_HOME_11_X64 }}\bin" | Out-File -FilePath $ENV:GITHUB_PATH -Encoding utf8 -Append
+
+      - name: Check installed/cached Java version
+        run: java -version
       - name: Install dependencies
         run: |
              cd democalculator
-             echo $JAVA_HOME
-             export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
              mvn -B install --no-transfer-progress --file pom.xml 
       - name: Run tests in parallel
         run: |
