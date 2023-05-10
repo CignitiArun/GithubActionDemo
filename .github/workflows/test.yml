@@ -26,6 +26,8 @@ jobs:
       - name: Install dependencies
         run: |
              cd democalculator
+             echo $JAVA_HOME
+             export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
              mvn -B install --no-transfer-progress --file pom.xml 
       - name: Run tests in parallel
         run: |
