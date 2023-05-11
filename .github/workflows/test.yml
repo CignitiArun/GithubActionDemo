@@ -38,7 +38,7 @@ jobs:
       - name: Run tests in parallel
         run: |
             cd democalculator
-            mvn verify -Dcucumber.filter.tags='@DivideServiceExample' -Dglue=org.example.stepdefs -Dplugin=json:target/cucumber-reports/Cucumber.json -Ddataproviderthreadcount=3
+            mvn verify -Dcucumber.filter.tags='@add' -Dglue=org.example.stepdefs -Dplugin=json:target/cucumber-reports/Cucumber.json -Ddataproviderthreadcount=3
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
