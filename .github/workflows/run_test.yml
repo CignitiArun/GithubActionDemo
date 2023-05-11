@@ -2,7 +2,7 @@ name: parallel tests
 #on: [push]
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
 jobs:
   ubuntu 1:
     runs-on: 
