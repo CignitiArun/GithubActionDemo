@@ -24,14 +24,6 @@ jobs:
           java-package: jdk
           server-id: github
           jdkFile: /usr/lib/jvm/java-11-openjdk-amd64
-
-      - name: Check installed/cached Java version
-        run: |
-             java -version
-             whereis java
-             which java
-             echo $JAVA_HOME
-             export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd6
       - name: Install Maven
   # You may pin to the exact commit or the version.
   # uses: yuzhiyongcn/setup-maven@0c5810c65a0fb6c88b6089724cc47370cf4eaffc
