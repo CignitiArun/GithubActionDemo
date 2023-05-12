@@ -1,11 +1,11 @@
 package org.example.stepdefs;
 
+import io.cucumber.core.api.Scenario;
+import io.cucumber.java.Before;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
 import org.example.World;
 import org.example.pojos.CalculatorSoap;
 import org.example.utils.Constants;
-
-import io.cucumber.java.Before;
 
 public class Hooks {
 

@@ -41,14 +41,14 @@ public class DivStepDef {
 		world.divideServiceResponse = world.calculatorSoapIns.divide(num1, num2);
 	}
 
-	@Given("I get the data from file {string} from {int} for divison")
-	public void theDataInFile(String fileName, int index) throws Exception {
+	@Given("I get the data from file (.*)")
+	public void theDataInFile(String fileName) throws Exception {
 		File file = new File(getClass().getClassLoader().getResource(fileName.replaceAll("\"", "")).getFile());
 		String jsonData = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())));
 		ObjectMapper mapper = new ObjectMapper();
 		List<Map<String, Integer>> data = mapper.readValue(jsonData, List.class);
 		world.exampleData = data;
-		Map<String, Integer> dataMap = world.exampleData.get(index);
+		Map<String, Integer> dataMap = world.exampleData.get(0);
 		int num1 = dataMap.get("num1");
 		int num2 = dataMap.get("num2");
 		world.divideServiceResponse = world.calculatorSoapIns.divide(num1, num2);

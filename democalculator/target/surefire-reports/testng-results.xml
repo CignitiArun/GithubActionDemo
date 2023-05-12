@@ -1,36 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-08T14:30:08 IST" name="Surefire suite" finished-at="2023-05-08T14:30:10 IST" duration-ms="1847">
+  <suite started-at="2023-05-12T12:49:39 IST" name="Surefire suite" finished-at="2023-05-12T12:49:41 IST" duration-ms="1605">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleEventWrapper,io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:org.example.TestRunner@3738449f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:org.example.TestRunner@40005471]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-05-08T14:30:08 IST" name="Surefire test" finished-at="2023-05-08T14:30:10 IST" duration-ms="1847">
+    <test started-at="2023-05-12T12:49:39 IST" name="Surefire test" finished-at="2023-05-12T12:49:41 IST" duration-ms="1605">
       <class name="org.example.TestRunner">
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:org.example.TestRunner@3738449f]" started-at="2023-05-08T14:30:08 IST" name="setUpClass" finished-at="2023-05-08T14:30:09 IST" duration-ms="117" status="PASS">
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:org.example.TestRunner@40005471]" started-at="2023-05-12T12:49:39 IST" name="setUpClass" finished-at="2023-05-12T12:49:40 IST" duration-ms="205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleEventWrapper,io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:org.example.TestRunner@3738449f]" started-at="2023-05-08T14:30:09 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-08T14:30:10 IST" duration-ms="1616" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:org.example.TestRunner@40005471]" started-at="2023-05-12T12:49:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-12T12:49:41 IST" duration-ms="1244" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Verify add service with JSON file"]]>
+                <![CDATA["Verify add service"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Demo Calc with example"]]>
+                <![CDATA["Demo Calc"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.TestRunner@3738449f]" started-at="2023-05-08T14:30:10 IST" name="tearDownClass" finished-at="2023-05-08T14:30:10 IST" duration-ms="20" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleEventWrapper, io.cucumber.testng.CucumberFeatureWrapper)[pri:0, instance:org.example.TestRunner@40005471]" started-at="2023-05-12T12:49:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-05-12T12:49:41 IST" duration-ms="1244" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify division service with JSON file"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Demo Calc with division example"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:org.example.TestRunner@40005471]" started-at="2023-05-12T12:49:41 IST" name="tearDownClass" finished-at="2023-05-12T12:49:41 IST" duration-ms="54" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

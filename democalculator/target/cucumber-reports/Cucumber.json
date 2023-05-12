@@ -1,0 +1,79 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-05-12T07:19:40.461Z",
+        "before": [
+          {
+            "result": {
+              "duration": 970807200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.initialise()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Verify add service",
+        "description": "",
+        "id": "demo-calc;verify-add-service",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [],
+        "tags": [
+          {
+            "name": "@AddService"
+          }
+        ]
+      }
+    ],
+    "name": "Demo Calc",
+    "description": "",
+    "id": "demo-calc",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/Add.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-05-12T07:19:40.461Z",
+        "before": [
+          {
+            "result": {
+              "duration": 970801500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.initialise()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verify division service with JSON file",
+        "description": "",
+        "id": "demo-calc-with-division-example;verify-division-service-with-json-file",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [],
+        "tags": [
+          {
+            "name": "@DivideServiceExample"
+          },
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Demo Calc with division example",
+    "description": "",
+    "id": "demo-calc-with-division-example",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/DivideExample.feature",
+    "tags": []
+  }
+]
