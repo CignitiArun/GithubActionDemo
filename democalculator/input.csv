@@ -1,5 +1,5 @@
 ﻿Tags,Agent
-smoke,Ruuner 1
-addservice,Ruuner 2
-divService,Runner 1
-Subtract,Runner 2
+smoke,label-1
+addservice,javaversion
+divService,label-1
+Subtract,javaversion
