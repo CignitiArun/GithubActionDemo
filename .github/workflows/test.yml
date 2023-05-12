@@ -34,7 +34,6 @@ jobs:
       - name: Install dependencies
         run: |
              cd democalculator
-             mvn update
              mvn clean install -DskipTests=true 
       - name: Run tests in parallel
         run: |
