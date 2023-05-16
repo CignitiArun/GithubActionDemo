@@ -1,5 +1,5 @@
-﻿Tags,Agent
-smoke,label-1
-addservice,javaversion
-divService,label-1
-Subtract,javaversion
+﻿Tags,Scenario Name,Status,Git Runner,Start Time,End Time
+AddServiceExample,.*Verify\s+add\s+service\s+with\s+JSON\s+file,,,,
+MultiplyServiceExample,.*Verify\s+multiply\s+service\s+with\s+JSON\s+file,,,,
+DivideServiceExample,.*Verify\s+division\s+service\s+with\s+JSON\s+file,,,,
+SubtractServiceExample,.*Verify\s+Subtract\s+service\s+with\s+JSON\s+file,,,,
