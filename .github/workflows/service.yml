@@ -34,7 +34,9 @@ jobs:
       - name: Run tests in parallel
         run: |
             cd democalculator
-            sudo ./run_test.sh
+            chmod +x ./run_test.sh
+            ./run_test.sh
+            shell: bash
             
 
       - name: Upload test results
@@ -70,7 +72,9 @@ jobs:
       - name: Run tests in parallel
         run: |
             cd democalculator
-            ./run_test.sh            
+            chmod +x ./run_test.sh
+            ./run_test.sh
+            shell: bash          
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
