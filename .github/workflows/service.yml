@@ -34,7 +34,7 @@ jobs:
       - name: Run tests in parallel
         run: |
             cd democalculator
-            mvn clean test verify -Dcucumber.options="--tags @AddService,@SubtractServiceExample" -Dglue=org.example.stepdefs -Dplugin=json:target/cucumber-reports/Cucumber.json -Ddataproviderthreadcount=3 
+            ./run_test.sh
             
 
       - name: Upload test results
@@ -70,8 +70,7 @@ jobs:
       - name: Run tests in parallel
         run: |
             cd democalculator
-            mvn clean test verify -Dcucumber.options="--tags @AddServiceExample,@DivideServiceExample" -Dglue=org.example.stepdefs -Dplugin=json:target/cucumber-reports/Cucumber.json -Ddataproviderthreadcount=3 
-            
+            ./run_test.sh            
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
