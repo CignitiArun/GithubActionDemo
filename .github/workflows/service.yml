@@ -35,7 +35,7 @@ jobs:
         run: |
             cd democalculator
             chmod +x ./run_test.sh
-            ./run_test.sh
+            sh run_test.sh
             shell: bash
             
 
@@ -73,7 +73,7 @@ jobs:
         run: |
             cd democalculator
             chmod +x ./run_test.sh
-            ./run_test.sh
+            sh run_test.sh
             shell: bash          
 
       - name: Upload test results
