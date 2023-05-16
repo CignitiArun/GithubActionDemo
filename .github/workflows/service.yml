@@ -36,7 +36,6 @@ jobs:
             cd democalculator
             chmod +x ./run_test.sh
             sh run_test.sh
-            shell: bash
             
 
       - name: Upload test results
@@ -73,8 +72,7 @@ jobs:
         run: |
             cd democalculator
             chmod +x ./run_test.sh
-            sh run_test.sh
-            shell: bash          
+            sh run_test.sh          
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
