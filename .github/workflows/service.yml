@@ -34,7 +34,7 @@ jobs:
       - name: Run tests in parallel
         run: |
             cd democalculator
-            ./run_test.sh
+            sudo ./run_test.sh
             
 
       - name: Upload test results
