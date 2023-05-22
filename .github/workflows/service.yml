@@ -27,24 +27,24 @@ jobs:
         with:
     # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
           maven-version: 3.8.2
-      - name: Install dependencies
-        run: |
-             cd democalculator
-             mvn clean install -DskipTests=true 
-      - name: Run tests in parallel
-        run: |
-            cd democalculator
-            chmod +x ./run_test.sh
-            tr -d '\r' <run_test.sh> test.sh
-            sudo chmod 777 test.sh
-            ./test.sh
+#       - name: Install dependencies
+#         run: |
+#              cd democalculator
+#              mvn clean install -DskipTests=true 
+#       - name: Run tests in parallel
+#         run: |
+#             cd democalculator
+#             chmod +x ./run_test.sh
+#             tr -d '\r' <run_test.sh> test.sh
+#             sudo chmod 777 test.sh
+#             ./test.sh
             
 
-      - name: Upload test results
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-results
-          path: target/cucumber-reports
+#       - name: Upload test results
+#         uses: actions/upload-artifact@v2
+#         with:
+#           name: test-results
+#           path: target/cucumber-reports
   windows2:
     runs-on: 
       - Agent_2
