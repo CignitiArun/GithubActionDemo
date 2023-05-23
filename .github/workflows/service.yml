@@ -42,7 +42,6 @@ jobs:
   windows2:
     runs-on: 
       - Agent_2
-      
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
