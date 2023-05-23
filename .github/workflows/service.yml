@@ -6,20 +6,46 @@ on:
   pull_request:
     branches: [ "main" ]
 jobs:
-  windows1:
-    runs-on: 
-      - Agent_1
+#   windows1:
+#     runs-on: 
+#       - Agent_1
 
+      
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
+        
+# #       - name: MySql in GitHub Actions
+# #   # You may pin to the exact commit or the version.
+# #   # uses: nnhy/mysql-action@222a90440dbe61dc5b4d971ef8117eaf3858e24b
+# #         uses: nnhy/mysql-action@v1.0 
+      
+#       - uses: actions/setup-java@v3
+#         with:
+#           distribution: temurin
+#           java-version: '11'        
+#           java-package: jdk
+#           server-id: github
+#           jdkFile: C:\Program Files\Java\jdk-1.8
+#       - name: Install Maven
+#   # You may pin to the exact commit or the version.
+#   # uses: yuzhiyongcn/setup-maven@0c5810c65a0fb6c88b6089724cc47370cf4eaffc
+#         uses: yuzhiyongcn/setup-maven@v1.0.0
+#         with:
+#     # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
+#           maven-version: 3.8.2
+#       - name: Install dependencies
+#         run: |
+#              cd democalculator
+#              java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application.properties
+            
+  windows2:
+    runs-on: 
+      - Agent_2
       
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        
-#       - name: MySql in GitHub Actions
-#   # You may pin to the exact commit or the version.
-#   # uses: nnhy/mysql-action@222a90440dbe61dc5b4d971ef8117eaf3858e24b
-#         uses: nnhy/mysql-action@v1.0 
-      
       - uses: actions/setup-java@v3
         with:
           distribution: temurin
@@ -37,30 +63,4 @@ jobs:
       - name: Install dependencies
         run: |
              cd democalculator
-             java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application.properties
-            
-#   windows2:
-#     runs-on: 
-#       - Agent_2
-      
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v3
-#       - uses: actions/setup-java@v3
-#         with:
-#           distribution: temurin
-#           java-version: '11'        
-#           java-package: jdk
-#           server-id: github
-#           jdkFile: C:\Program Files\Java\jdk-1.8
-#       - name: Install Maven
-#   # You may pin to the exact commit or the version.
-#   # uses: yuzhiyongcn/setup-maven@0c5810c65a0fb6c88b6089724cc47370cf4eaffc
-#         uses: yuzhiyongcn/setup-maven@v1.0.0
-#         with:
-#     # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
-#           maven-version: 3.8.2
-#       - name: Install dependencies
-#         run: |
-# 
-#              java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application.properties_Agent2
+             java -jar cucumber-tc-execution-engine-1.0.jar Agent_2 --spring.config.location=application2.properties
