@@ -45,4 +45,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: test-results
-          path: target/cucumber-reports
+          path: democalculator/target/cucumber-reports
