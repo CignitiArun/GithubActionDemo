@@ -30,11 +30,11 @@ jobs:
         run: |
              cd democalculator
              java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application.properties
-      - name: Upload test results
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-results
-          path: democalculator/target/cucumber-reports     
+#       - name: Upload test results
+#         uses: actions/upload-artifact@v2
+#         with:
+#           name: test-results
+#           path: democalculator/target/cucumber-reports     
   windows2:
     runs-on: 
       - Agent_2
@@ -59,8 +59,8 @@ jobs:
         run: |
              cd democalculator
              java -jar cucumber-tc-execution-engine-1.0.jar Agent_2 --spring.config.location=application2.properties
-      - name: Upload test results
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-results
-          path: democalculator/target/cucumber-reports
+#       - name: Upload test results
+#         uses: actions/upload-artifact@v2
+#         with:
+#           name: test-results
+#           path: democalculator/target/cucumber-reports
