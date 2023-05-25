@@ -10,6 +10,10 @@ jobs:
     runs-on: 
       - Agent_1
     steps:
+      - name: Clean Workspace
+  # You may pin to the exact commit or the version.
+  # uses: AutoModality/action-clean@d004b47eb728f2a83316fc70ba9a62ef97278013
+        uses: AutoModality/action-clean@v1.1.0
       - name: Checkout code
         uses: actions/checkout@v3
       - uses: actions/setup-java@v3
@@ -35,6 +39,10 @@ jobs:
     runs-on: 
       - Agent_2
     steps:
+      - name: Clean Workspace
+  # You may pin to the exact commit or the version.
+  # uses: AutoModality/action-clean@d004b47eb728f2a83316fc70ba9a62ef97278013
+        uses: AutoModality/action-clean@v1.1.0
       - name: Checkout code
         uses: actions/checkout@v3
       - uses: actions/setup-java@v3
