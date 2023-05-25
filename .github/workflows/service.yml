@@ -30,14 +30,14 @@ jobs:
 #         run: |
 #              cd democalculator
 #              java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application10.properties
-      - name: Cloning repo 
-        run: |
-             cd C:\clonecode
-             git clone https://github.com/CignitiArun/GithubActionDemo.git
-#       - name: moving reports 
+#       - name: Cloning repo 
 #         run: |
-#              Cd democalculator\target\cucumber-reports
-#              move ./* C:\clonecode\GithubActionDemo\democalculator\reports
+#              cd C:\clonecode
+#              git clone https://github.com/CignitiArun/GithubActionDemo.git
+      - name: moving reports 
+        run: |
+             Cd democalculator\target\cucumber-reports
+             move /y ./* C:\clonecode\GithubActionDemo\democalculator\reports
 #       - name: push code to repo 
 #         run: |
 #              Cd C:\clonecode\GithubActionDemo
