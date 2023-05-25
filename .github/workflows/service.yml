@@ -43,6 +43,7 @@ jobs:
              Cd C:\clonecode\GithubActionDemo
              git config --global user.email "E005530@cigniti.com"
              git config --global user.name "CignitiArun"
+             git config --global --add safe.directory C:/clonecode/GithubActionDemo
              git add .
              git commit -m "message"
              git push
