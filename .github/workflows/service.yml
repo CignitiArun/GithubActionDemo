@@ -10,88 +10,50 @@ jobs:
     runs-on: 
       - Agent_1
     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v3
-#       - uses: actions/setup-java@v3
-#         with:
-#           distribution: temurin
-#           java-version: '11'        
-#           java-package: jdk
-#           server-id: github
-#           jdkFile: C:\Program Files\Java\jdk-1.8
-#       - name: Install Maven
-#   # You may pin to the exact commit or the version.
-#   # uses: yuzhiyongcn/setup-maven@0c5810c65a0fb6c88b6089724cc47370cf4eaffc
-#         uses: yuzhiyongcn/setup-maven@v1.0.0
-#         with:
-#     # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
-#           maven-version: 3.8.2
-#       - name: Install dependencies
-#         run: |
-#              cd democalculator
-#              java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application10.properties
-#       - name: Cloning repo 
-#         run: |
-#              cd C:\clonecode
-#              git clone https://github.com/CignitiArun/GithubActionDemo.git
-#       - name: moving reports 
-#         run: |
-#              Cd democalculator\target\cucumber-reports
-#              Move-Item ./* C:\clonecode\GithubActionDemo\democalculator\reports -Force
-      - name: push code to repo 
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: '11'        
+          java-package: jdk
+          server-id: github
+          jdkFile: C:\Program Files\Java\jdk-1.8
+      - name: Install Maven
+  # You may pin to the exact commit or the version.
+  # uses: yuzhiyongcn/setup-maven@0c5810c65a0fb6c88b6089724cc47370cf4eaffc
+        uses: yuzhiyongcn/setup-maven@v1.0.0
+        with:
+    # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
+          maven-version: 3.8.2
+      - name: Install dependencies
         run: |
-             Cd C:\clonecode\GithubActionDemo
-             git config --global user.email "E005530@cigniti.com"
-             git config --global user.name "CignitiArun"
-             git config --global --add safe.directory C:/clonecode/GithubActionDemo
-             git add .
-             git commit -m "message"
-             git push
-#       - name: GitHub Push
-#   # You may pin to the exact commit or the version.
-#   # uses: ad-m/github-push-action@40bf560936a8022e68a3c00e7d2abefaf01305a6
-#         uses: ad-m/github-push-action@v0.6.0
-#         with:
-#          github_token: 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
-#          branch: main
-#     # Directory to change to before pushing.
-#          directory: .
+             cd democalculator
+             java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application10.properties
+
            
-#   windows2:
-#     runs-on: 
-#       - Agent_2
-#     steps:
-#       - name: Checkout code
-#         uses: actions/checkout@v3
-#       - uses: actions/setup-java@v3
-#         with:
-#           distribution: temurin
-#           java-version: '11'        
-#           java-package: jdk
-#           server-id: github
-#           jdkFile: C:\Program Files\Java\jdk-1.8
-#       - name: Install Maven
-#   # You may pin to the exact commit or the version.
-#   # uses: yuzhiyongcn/setup-maven@0c5810c65a0fb6c88b6089724cc47370cf4eaffc
-#         uses: yuzhiyongcn/setup-maven@v1.0.0
-#         with:
-#     # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
-#           maven-version: 3.8.2
-#       - name: Install dependencies
-#         run: |
-#              cd democalculator
-#              java -jar cucumber-tc-execution-engine-1.0.jar Agent_2 --spring.config.location=application2.properties
-#       - name: Cloning repo 
-#         run: |
-#              cd C:\clonecode
-#              git clone https://github.com/CignitiArun/GithubActionDemo.git
-#       - name: moving reports 
-#         run: |
-#              Cd democalculator\target\cucumber-reports
-#              move ./* C:\clonecode\GithubActionDemo\democalculator\reports
-#       - name: push code to repo 
-#         run: |
-#              Cd C:\clonecode\GithubActionDemo
-#              git add .
-#              git commit -m "message"
-#              git push
+  windows2:
+    runs-on: 
+      - Agent_2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: '11'        
+          java-package: jdk
+          server-id: github
+          jdkFile: C:\Program Files\Java\jdk-1.8
+      - name: Install Maven
+  # You may pin to the exact commit or the version.
+  # uses: yuzhiyongcn/setup-maven@0c5810c65a0fb6c88b6089724cc47370cf4eaffc
+        uses: yuzhiyongcn/setup-maven@v1.0.0
+        with:
+    # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
+          maven-version: 3.8.2
+      - name: Install dependencies
+        run: |
+             cd democalculator
+             java -jar cucumber-tc-execution-engine-1.0.jar Agent_2 --spring.config.location=application2.properties
+      
