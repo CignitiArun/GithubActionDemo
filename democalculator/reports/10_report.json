@@ -1,0 +1,83 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-05-25T08:54:15.356Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1133557300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.initialise()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verify multiply service with JSON file",
+        "description": "",
+        "id": "demo-calc-with-multiply-example;verify-multiply-service-with-json-file",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 467607000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I Multiply 2 and 4",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 11
+                },
+                {
+                  "val": "4",
+                  "offset": 17
+                }
+              ],
+              "location": "MultiplyStepDef.iMultiply(int,int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2360100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Multiply service should return me 8",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8",
+                  "offset": 34
+                }
+              ],
+              "location": "AssertionStepDef.mulServiceShouldReturnMe(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@MultiplyServiceExample"
+          },
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Demo Calc with Multiply example",
+    "description": "",
+    "id": "demo-calc-with-multiply-example",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/MultiplyExample.feature",
+    "tags": []
+  }
+]

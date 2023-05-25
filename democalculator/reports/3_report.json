@@ -1,0 +1,83 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-05-25T08:53:45.121Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1195059200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.initialise()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Verify division service with JSON file",
+        "description": "",
+        "id": "demo-calc-with-division-example;verify-division-service-with-json-file",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 447629200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I divide 4 and 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 9
+                },
+                {
+                  "val": "2",
+                  "offset": 15
+                }
+              ],
+              "location": "DivStepDef.iAdd(int,int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2332600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Divide service should return me 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 32
+                }
+              ],
+              "location": "AssertionStepDef.divServiceShouldReturnMe(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@DivideServiceExample"
+          },
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Demo Calc with division example",
+    "description": "",
+    "id": "demo-calc-with-division-example",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/DivideExample.feature",
+    "tags": []
+  }
+]

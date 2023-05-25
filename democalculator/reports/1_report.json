@@ -1,0 +1,83 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-05-25T08:53:33.955Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1316543100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.initialise()"
+            }
+          }
+        ],
+        "line": 9,
+        "name": "Verify add service with JSON file",
+        "description": "",
+        "id": "demo-calc-with-example;verify-add-service-with-json-file;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 755305500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I get the data from file \"ExampleAdd.json\" from 0 for addition",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ExampleAdd.json\"",
+                  "offset": 25
+                },
+                {
+                  "val": "0",
+                  "offset": 48
+                }
+              ],
+              "location": "AddStepDef.theDataInFile(String,int)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4188900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "ADD service should return me 6",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 29
+                }
+              ],
+              "location": "AssertionStepDef.addServiceShouldReturnMe(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@AddServiceExample"
+          },
+          {
+            "name": "@smoke"
+          }
+        ]
+      }
+    ],
+    "name": "Demo Calc with example",
+    "description": "",
+    "id": "demo-calc-with-example",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/AddExample.feature",
+    "tags": []
+  }
+]
