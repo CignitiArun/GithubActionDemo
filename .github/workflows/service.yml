@@ -3,8 +3,8 @@ name: demo github actions
 on:
   push:
     branches: [ "main" ]
-#   pull_request:
-#     branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 jobs:
   windows1:
     runs-on: 
@@ -29,9 +29,7 @@ jobs:
       - name: Install dependencies
         run: |
              cd democalculator
-             java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application10.properties
-
-           
+             java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application10.properties 
   windows2:
     runs-on: 
       - Agent_2
@@ -56,4 +54,3 @@ jobs:
         run: |
              cd democalculator
              java -jar cucumber-tc-execution-engine-1.0.jar Agent_2 --spring.config.location=application2.properties
-      
