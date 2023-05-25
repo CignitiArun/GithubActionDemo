@@ -37,7 +37,7 @@ jobs:
       - name: moving reports 
         run: |
              Cd democalculator\target\cucumber-reports
-             Move-Item ./* C:\clonecode\GithubActionDemo\democalculator\reports
+             Move-Item ./* C:\clonecode\GithubActionDemo\democalculator\reports -Force
 #       - name: push code to repo 
 #         run: |
 #              Cd C:\clonecode\GithubActionDemo
