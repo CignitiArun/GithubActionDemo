@@ -34,20 +34,20 @@ jobs:
 #         run: |
 #              cd democalculator
 #              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
-        - name: Send JSON report via email
-          uses: dawidd6/action-send-mail@v3
+        - name: Send email
+          uses: devellany/send-mail@v1.0.2
           with:
-             server_address: smtp.office365.com
-             server_port: 587
-             username: arunteja.devabhaktuni@cigniti.com
-             password: ammananijabilli@1328
-             subject: JSON Report
-             body: |
-                   Please find attached the JSON report for the latest test run.
-                   from: arunteja.devabhaktuni@cigniti.com
-                   to: bharat.nakka@cigniti.com
-             attachments: |
-                     C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports\\Agent_1 2023-05-26 05-33-54_report.json
+           host: smtp.gmail.com
+           account: ${{secrets.MAIL_ADDRESS}}
+           password: ${{secrets.MAIL_PASSWORD}}
+           sender: arun
+           from: ${{secrets.MAIL_ADDRESS}}
+           subject: Github Actions job result
+           body: json file
+           attachments: 'C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports\\Agent_1 2023-05-26 05-33-54_report.json'
+           to: bharat.nakka@cigniti.com
+        
+                        
 #   windows2:
 #     runs-on: 
 #       - Agent_2
