@@ -44,7 +44,7 @@ jobs:
              subject: JSON Report
              body: |
                 Please find attached the JSON report for the latest test run.
-                from: E005530@cigniti.com
+                from: arunteja.devabhaktuni@cigniti.com
                 to: bharat.nakka@cigniti.com
              attachments: |
                      "C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports\\Agent_1 2023-05-26 05-33-54_report.json"
