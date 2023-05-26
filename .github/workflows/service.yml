@@ -35,17 +35,27 @@ jobs:
 #              cd democalculator
 #              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
         - name: Send email
-          uses: devellany/send-mail@v1.0.2
-          with:
-           host: smtp.office365.com
-           account: ${{secrets.MAIL_ADDRESS}}
-           password: ${{secrets.MAIL_PASSWORD}}
-           sender: arun
-           from: ${{secrets.MAIL_ADDRESS}}
-           subject: Github Actions job result
-           body: json file
-           attachments: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json
-           to: bharat.nakka@cigniti.com
+          run: |
+               Install-Module -Name PowerShellGet -Force -AllowClobber -Scope CurrentUser -SkipPublisherCheck
+               Install-Module -Name Send-MailMessage -Force -AllowClobber -Scope CurrentUser -SkipPublisherCheck
+               $jsonFile = "C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json"
+               $smtpServer = "smtp.gmail.com"
+               $senderAddress = "arunteja.devabhaktuni@cigniti.com"
+               $receiverAddress = "bharat.nakka@cigniti.com"
+               $subject = "JSON Report"
+               $body = "Please find attached the JSON report for the latest test run"
+
+               try {
+               # Import required modules
+                Import-Module -Name Send-MailMessage
+
+                # Send email with attachment
+                $attachment = Get-Item -Path $jsonFile
+                Send-MailMessage -From $senderAddress -To $receiverAddress -Subject $subject -Body $body -SmtpServer $smtpServer -Attachments $attachment.FullName
+                } catch {
+                Write-Error "Failed to send email: $_"
+               }
+
         
                         
 #   windows2:
