@@ -36,6 +36,7 @@ jobs:
 #              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
         - name: Send email
           run: |
+               Install-PackageProvider -Name NuGet -Force
                Install-Module -Name PowerShellGet -Force -AllowClobber -Scope CurrentUser -SkipPublisherCheck
                Install-Module -Name Send-MailMessage -Force -AllowClobber -Scope CurrentUser -SkipPublisherCheck
                $jsonFile = "C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json"
