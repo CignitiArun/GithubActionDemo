@@ -38,20 +38,20 @@ jobs:
           shell: pwsh
           run: |
                # Import the required modules
-Import-Module -Name "Send-MailMessage"
+               Import-Module -Name "Send-MailMessage"
 
-# Define the email parameters
-$smtpServer = "smtp.office365.com"
-$senderAddress = "arunteja.devabhaktuni@cigniti.com"
-$recipientAddress = "bharat.nakka@cigniti.com"
-$subject = "json report"
-$body = "Please find attached the JSON report for the latest test run."
+               # Define the email parameters
+               $smtpServer = "smtp.office365.com"
+               $senderAddress = "arunteja.devabhaktuni@cigniti.com"
+               $recipientAddress = "bharat.nakka@cigniti.com"
+               $subject = "json report"
+               $body = "Please find attached the JSON report for the latest test run."
 
-# Attach the JSON file
-$attachmentPath = "C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json"
+               # Attach the JSON file
+               $attachmentPath = "C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json"
 
-# Send the email
-Send-MailMessage -SmtpServer $smtpServer -From $senderAddress -To $recipientAddress -Subject $subject -Body $body -Attachments $attachmentPath
+               # Send the email
+               Send-MailMessage -SmtpServer $smtpServer -From $senderAddress -To $recipientAddress -Subject $subject -Body $body -Attachments $attachmentPath
 
 
         
