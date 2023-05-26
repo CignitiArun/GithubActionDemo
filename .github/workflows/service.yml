@@ -35,28 +35,24 @@ jobs:
 #              cd democalculator
 #              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
         - name: Send email
+          shell: pwsh
           run: |
-               Install-Module -Name "PowerShellGet" -Force -AllowClobber -Scope CurrentUser
-               Install-PackageProvider -Name NuGet -Force
-               Install-Module -Name PowerShellGet -Force -AllowClobber -Scope CurrentUser -SkipPublisherCheck
-               Install-Module -Name Send-MailMessage -Force -AllowClobber -Scope CurrentUser -SkipPublisherCheck
-               $jsonFile = "C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json"
-               $smtpServer = "smtp.gmail.com"
-               $senderAddress = "arunteja.devabhaktuni@cigniti.com"
-               $receiverAddress = "bharat.nakka@cigniti.com"
-               $subject = "JSON Report"
-               $body = "Please find attached the JSON report for the latest test run"
+               # Import the required modules
+Import-Module -Name "Send-MailMessage"
 
-               try {
-               # Import required modules
-                Import-Module -Name Send-MailMessage
+# Define the email parameters
+$smtpServer = "smtp.office365.com"
+$senderAddress = "arunteja.devabhaktuni@cigniti.com"
+$recipientAddress = "bharat.nakka@cigniti.com"
+$subject = "json report"
+$body = "Please find attached the JSON report for the latest test run."
 
-                # Send email with attachment
-                $attachment = Get-Item -Path $jsonFile
-                Send-MailMessage -From $senderAddress -To $receiverAddress -Subject $subject -Body $body -SmtpServer $smtpServer -Attachments $attachment.FullName
-                } catch {
-                Write-Error "Failed to send email: $_"
-               }
+# Attach the JSON file
+$attachmentPath = "C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json"
+
+# Send the email
+Send-MailMessage -SmtpServer $smtpServer -From $senderAddress -To $recipientAddress -Subject $subject -Body $body -Attachments $attachmentPath
+
 
         
                         
