@@ -35,7 +35,6 @@ jobs:
 #              cd democalculator
 #              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
         - name: Send email
-          shell: pwsh
           run: |
                # Import the required modules
                Import-Module -Name "Send-MailMessage"
