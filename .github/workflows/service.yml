@@ -37,7 +37,7 @@ jobs:
         - name: Set up Python
           uses: actions/setup-python@v2
           with:
-           python-version: '3.x'  # Choose your desired Python version
+           python-version: '3.11.3'  # Choose your desired Python version
 
         - name: Install dependencies
           run: |
@@ -52,8 +52,7 @@ jobs:
                $body = "Please find attached the JSON file."
 
                Send-MailMessage -From $emailFrom -To $emailTo -Subject $subject -Body $body -Attachments "C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json"
-        
-                        
+                    
 #   windows2:
 #     runs-on: 
 #       - Agent_2
