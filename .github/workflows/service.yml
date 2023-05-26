@@ -26,10 +26,14 @@ jobs:
         with:
     # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
           maven-version: 3.8.2
-      - name: Install dependencies
+      - name: execute tests
         run: |
              cd democalculator
-             java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application10.properties 
+             java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application10.properties
+      - name: merge reports
+        run: |
+             cd democalculator
+             java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
   windows2:
     runs-on: 
       - Agent_2
@@ -54,3 +58,7 @@ jobs:
         run: |
              cd democalculator
              java -jar cucumber-tc-execution-engine-1.0.jar Agent_2 --spring.config.location=application2.properties
+      - name: merge reports
+        run: |
+             cd democalculator
+             java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_2
