@@ -44,7 +44,7 @@ jobs:
            from: ${{secrets.MAIL_ADDRESS}}
            subject: Github Actions job result
            body: json file
-           attachments: 'C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports\\Agent_1 2023-05-26 05-33-54_report.json'
+           attachments: C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports\\Agent_1 2023-05-26 05-33-54_report.json
            to: bharat.nakka@cigniti.com
         
                         
