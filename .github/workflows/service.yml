@@ -34,25 +34,24 @@ jobs:
 #         run: |
 #              cd democalculator
 #              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
+        - name: Set up Python
+          uses: actions/setup-python@v2
+          with:
+           python-version: '3.x'  # Choose your desired Python version
+
+        - name: Install dependencies
+          run: |
+               pip install -r requirements.txt
+
         - name: Send email
           run: |
-               # Import the required modules
-               Import-Module -Name "Send-MailMessage"
+          
+               $emailFrom = "arunteja.devabhaktuni@cigniti.com"
+               $emailTo = "bharat.nakka@cigniti.com"
+               $subject = "JSON file"
+               $body = "Please find attached the JSON file."
 
-               # Define the email parameters
-               $smtpServer = "smtp.gmail.com"
-               $senderAddress = "arunteja.devabhaktuni@cigniti.com"
-               $recipientAddress = "bharat.nakka@cigniti.com"
-               $subject = "json report"
-               $body = "Please find attached the JSON report for the latest test run."
-
-               # Attach the JSON file
-               $attachmentPath = "C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json"
-
-               # Send the email
-               Send-MailMessage -SmtpServer $smtpServer -From $senderAddress -To $recipientAddress -Subject $subject -Body $body -Attachments $attachmentPath
-
-
+               Send-MailMessage -From $emailFrom -To $emailTo -Subject $subject -Body $body -Attachments "C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json"
         
                         
 #   windows2:
