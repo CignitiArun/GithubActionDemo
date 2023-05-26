@@ -39,10 +39,10 @@ jobs:
            if: always()
            uses: dawidd6/action-send-mail@v3
            with:
-             server_address: smtp.office365.com
-             server_port: 587
-             username: ${{ secrets.MAIL_ADDRESS }}
-             password: ${{ secrets.MAIL_PASSWORD }}
+             server_address: smtp.gmail.com
+             server_port: 465
+             username: arunsree1317@gmail.com
+             password: 9177801913
              subject: JSON Report
              body: |
                Please find attached the JSON report for the latest test run.
