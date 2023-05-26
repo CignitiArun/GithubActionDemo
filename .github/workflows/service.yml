@@ -41,8 +41,8 @@ jobs:
            with:
              server_address: smtp.gmail.com
              server_port: 465
-             username: 
-             password: 
+             username: incight@cigniti.com
+             password: Cigniti#2345
              subject: JSON Report
              body: |
                Please find attached the JSON report for the latest test run.
