@@ -40,7 +40,7 @@ jobs:
                Import-Module -Name "Send-MailMessage"
 
                # Define the email parameters
-               $smtpServer = "smtp.office365.com"
+               $smtpServer = "smtp.gmail.com"
                $senderAddress = "arunteja.devabhaktuni@cigniti.com"
                $recipientAddress = "bharat.nakka@cigniti.com"
                $subject = "json report"
