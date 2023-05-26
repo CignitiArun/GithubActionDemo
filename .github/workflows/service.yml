@@ -39,8 +39,8 @@ jobs:
            if: always()
            uses: dawidd6/action-send-mail@v3
            with:
-             server_address: smtp.gmail.com
-             server_port: 465
+             server_address: smtp.office365.com
+             server_port: 587
              username: incight@cigniti.com
              password: Cigniti#2345
              subject: JSON Report
