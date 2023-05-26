@@ -37,7 +37,6 @@ jobs:
         - name: Send email
           run: |
                # Import the required modules
-               Set-ExecutionPolicy -Scope CurrentUser
                Import-Module -Name "Send-MailMessage"
 
                # Define the email parameters
