@@ -41,12 +41,12 @@ jobs:
            with:
              server_address: smtp.office365.com
              server_port: 587
-             username: incight@cigniti.com
-             password: Cigniti#2345
+             username: arunteja.devabhaktuni@cigniti.com
+             password: ammananijabilli@1328
              subject: JSON Report
              body: |
                Please find attached the JSON report for the latest test run.
-             from: incight@cigniti.com
+             from: arunteja.devabhaktuni@cigniti.com
              to: bharat.nakka@cigniti.com
              attachments: |
                            C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json
