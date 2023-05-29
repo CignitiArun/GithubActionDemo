@@ -129,5 +129,9 @@ jobs:
       steps:
         - name: Download a Build Artifact
           uses: actions/download-artifact@v2.1.1
+        - name: Merge reports
+          run: |
+             java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo Agent_1
+        
               
                 
