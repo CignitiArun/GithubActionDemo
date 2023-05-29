@@ -132,7 +132,7 @@ jobs:
         - name: Merge reports
           run: |
              cd democalculator
-             java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo Agent_1
+             java -jar merge-cucumber-jar.jar "C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\Json files uploading" Agent_1
         
               
                 
