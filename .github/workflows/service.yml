@@ -50,11 +50,11 @@ jobs:
 #          git add C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
 #          git commit -m "Commit JSON files"
 #          git push origin main
-#         - name: commit json files
-#           uses: actions/upload-artifact@v1
-#           with:
-#            name: Json files uploading
-#            path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
+        - name: commit json files
+          uses: actions/upload-artifact@v1
+          with:
+           name: Json files uploading
+           path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
           
 
 #          - name: Send JSON report via email
@@ -116,14 +116,15 @@ jobs:
 #             git add C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
 #             git commit -m "Commit JSON files"
 #             git push origin main
-#          - name: commit json files
-#            uses: actions/upload-artifact@v1
-#            with:
-#             name: Json files uploading
-#             path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
-          windows1:
+# #          - name: commit json files
+# #            uses: actions/upload-artifact@v1
+# #            with:
+# #             name: Json files uploading
+# #             path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
+           windows3:
            runs-on: 
            - Agent_1
+           needs: [windows1, windows2]
            steps:
             - name: Download a Build Artifact
               uses: actions/download-artifact@v2.1.1
