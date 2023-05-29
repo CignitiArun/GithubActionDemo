@@ -40,16 +40,21 @@ jobs:
 #         run: |
 #           xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_1.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports\ /Y
           
-      - name: Configure Git
-        run: |
-         git config --global user.email "E005530@cigniti.com"
-         git config --global user.name "CignitiArun"
+#       - name: Configure Git
+#         run: |
+#          git config --global user.email "E005530@cigniti.com"
+#          git config --global user.name "CignitiArun"
 
-      - name: Commit JSON files
-        run: |
-         git add C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
-         git commit -m "Commit JSON files"
-         git push origin main
+#       - name: Commit JSON files
+#         run: |
+#          git add C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
+#          git commit -m "Commit JSON files"
+#          git push origin main
+        - name: commit json files
+          uses: actions/upload-artifact@v1
+          with:
+           name: Json files uploading
+           path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
 #          - name: Send JSON report via email
 #            if: always()
 #            uses: dawidd6/action-send-mail@v3
@@ -99,13 +104,18 @@ jobs:
 #           id: move_file
 #           run: |
 #            xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_2.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports\ /Y
-        - name: Configure Git
-          run: |
-             git config --global user.email "E005530@cigniti.com"
-             git config --global user.name "CignitiArun"
+#         - name: Configure Git
+#           run: |
+#              git config --global user.email "E005530@cigniti.com"
+#              git config --global user.name "CignitiArun"
 
-        - name: Commit JSON files
-          run: |
-            git add C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
-            git commit -m "Commit JSON files"
-            git push origin main
+#         - name: Commit JSON files
+#           run: |
+#             git add C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
+#             git commit -m "Commit JSON files"
+#             git push origin main
+         - name: commit json files
+           uses: actions/upload-artifact@v1
+           with:
+            name: Json files uploading
+            path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
