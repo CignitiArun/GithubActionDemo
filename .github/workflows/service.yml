@@ -35,21 +35,21 @@ jobs:
 #              cd democalculator
 #              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
 
-         - name: Send JSON report via email
-           if: always()
-           uses: dawidd6/action-send-mail@v3
-           with:
-             server_address: smtp.office365.com
-             server_port: 587
-             username: arunteja.devabhaktuni@cigniti.com
-             password: ammananijabilli@1328
-             subject: JSON Report
-             body: |
-               Please find attached the JSON report for the latest test run.
-             from: arunteja.devabhaktuni@cigniti.com
-             to: bharat.nakka@cigniti.com
-             attachments: |
-                           C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json
+#          - name: Send JSON report via email
+#            if: always()
+#            uses: dawidd6/action-send-mail@v3
+#            with:
+#              server_address: smtp.office365.com
+#              server_port: 587
+#              username: arunteja.devabhaktuni@cigniti.com
+#              password: ammananijabilli@1328
+#              subject: JSON Report
+#              body: |
+#                Please find attached the JSON report for the latest test run.
+#              from: arunteja.devabhaktuni@cigniti.com
+#              to: bharat.nakka@cigniti.com
+#              attachments: |
+#                            C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json
 
                     
 #   windows2:
@@ -80,3 +80,11 @@ jobs:
 #         run: |
 #              cd democalculator
 #              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_2
+  windows2:
+    runs-on: 
+      - Agent_2
+    steps:
+    - name: Copy files from Runner 2 to Runner 1
+      run: |
+          $destination = '\\\\18.116.134.12\\C$\\action-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports\\'
+          Copy-Item -Path 'C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports\\*' -Destination $destination -Recurse -Force
