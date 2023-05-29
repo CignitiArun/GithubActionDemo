@@ -87,5 +87,4 @@ jobs:
     - name: Copy files from Runner 2 to Runner 1
       run: |
           cd democalculator
-          $destination = '\\18.116.134.12\\C$\\action-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports\\'
-          Copy-Item -Path 'target\\cucumber-reports\\2_report.json' -Destination $destination -Recurse -Force
+          Copy-Item -Path 'target\cucumber-reports\2_report.json' -Destination '\\18.116.134.12\C$\action-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\' -Recurse -Force
