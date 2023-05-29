@@ -87,7 +87,7 @@ jobs:
     - name: Debugging Step 1
       run: |
           Write-Host "Testing network connectivity..."
-          Test-Connection -ComputerName runner1 -Count 4
+          Test-Connection -ComputerName Agent_1 -Count 4
     - name: Copy files from Runner 2 to Runner 1
       run: |
           Copy-Item -Path 'C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\*' -Destination '\\Agent_1\C$\action-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\' -Recurse -Force
