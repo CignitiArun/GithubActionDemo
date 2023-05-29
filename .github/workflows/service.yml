@@ -131,6 +131,7 @@ jobs:
           uses: actions/download-artifact@v2.1.1
         - name: Merge reports
           run: |
+             cd democalculator
              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo Agent_1
         
               
