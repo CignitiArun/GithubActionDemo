@@ -35,19 +35,21 @@ jobs:
 #         run: |
 #              cd democalculator
 #              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
-      - name: Move JSON file to Directory
-        id: move_file
-        run: |
-          xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_1.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports\ /Y
-          
-#       - name: Commit Runner1 Reports
+#       - name: Move JSON file to Directory
+#         id: move_file
 #         run: |
-#              cd runner1_workspace/cucumber-reports
-#              git config --global user.email "E005530@cigniti.com"
-#              git config --global user.name "CignitiArun"
-#              git add .
-#              git commit -m "Add Runner1 reports"
-#              git push
+#           xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_1.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports\ /Y
+          
+      - name: Configure Git
+        run: |
+         git config --global user.email "E005530@cigniti.com"
+         git config --global user.name "CignitiArun"
+
+      - name: Commit JSON files
+        run: |
+         git add C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
+         git commit -m "Commit JSON files"
+         git push origin main
 #          - name: Send JSON report via email
 #            if: always()
 #            uses: dawidd6/action-send-mail@v3
@@ -93,15 +95,17 @@ jobs:
 #         run: |
 #              cd democalculator
 #              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_2
-        - name: Move JSON file to Directory
-          id: move_file
+#         - name: Move JSON file to Directory
+#           id: move_file
+#           run: |
+#            xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_2.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports\ /Y
+        - name: Configure Git
           run: |
-           xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_2.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports\ /Y
-#       - name: Commit Runner1 Reports
-#         run: |
-#              cd runner1_workspace/cucumber-reports
-#              git config --global user.email "E005530@cigniti.com"
-#              git config --global user.name "CignitiArun"
-#              git add .
-#              git commit -m "Add Runner1 reports"
-#              git push
+             git config --global user.email "E005530@cigniti.com"
+             git config --global user.name "CignitiArun"
+
+        - name: Commit JSON files
+          run: |
+            git add C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
+            git commit -m "Commit JSON files"
+            git push origin main
