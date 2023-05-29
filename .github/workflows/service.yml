@@ -97,7 +97,6 @@ jobs:
           id: move_file
           run: |
            xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_2.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports\ /Y
-           
 #       - name: Commit Runner1 Reports
 #         run: |
 #              cd runner1_workspace/cucumber-reports
