@@ -86,4 +86,4 @@ jobs:
     steps:
     - name: Copy files from Runner 2 to Runner 1
       run: |
-          Copy-Item -Path 'C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\*' -Destination '\\18.116.134.12\C$\action-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\' -Recurse -Force
+          Copy-Item -Path 'C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\*' -Destination '\\Agent_1\C$\action-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\' -Recurse -Force
