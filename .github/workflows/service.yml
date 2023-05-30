@@ -116,6 +116,4 @@ jobs:
           run: |
              cd democalculator
              java -jar merge-cucumber-jar.jar C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\jsonartifacts Agent_1
-        
               
-                
