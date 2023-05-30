@@ -34,7 +34,7 @@ jobs:
       - name: Merge reports
         run: |
              cd democalculator
-             java -jar merge-cucumber-report.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
+             java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
 #       - name: Move JSON file to Directory
 #         id: move_file
 #         run: |
@@ -92,7 +92,7 @@ jobs:
       - name: Merge reports
         run: |
              cd democalculator
-             java -jar merge-cucumber-report.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_2
+             java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_2
 #         - name: Move JSON file to Directory
 #           id: move_file
 #           run: |
