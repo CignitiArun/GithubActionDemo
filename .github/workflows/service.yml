@@ -39,14 +39,14 @@ jobs:
       - name: Move JSON file to Directory
         id: move_file
         run: |
-          xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_1_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports\ /Y
+          xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_1_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\ /Y
           
 
       - name: upload artifacts
         uses: actions/upload-artifact@v1
         with:
            name: jsonartifacts
-           path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
+           path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target
           
 
 #          - name: Send JSON report via email
@@ -97,13 +97,13 @@ jobs:
         - name: Move JSON file to Directory
           id: move_file
           run: |
-           xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_2_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports\ /Y
+           xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_2_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\ /Y
 
         - name: commit json files
           uses: actions/upload-artifact@v1
           with:
              name: jsonartifacts
-             path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereports
+             path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target
            
   windows3:
       needs: [windows1, windows2]
