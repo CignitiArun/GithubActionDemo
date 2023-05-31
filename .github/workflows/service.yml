@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [ "main" ]
 jobs:
-  windows1:
+  Agent1:
     runs-on: 
       - Agent_1
     steps:
@@ -66,7 +66,7 @@ jobs:
 #                            C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent.json
 
                     
-  windows2:
+  Agent2:
     runs-on: 
       - Agent_2
     steps:
@@ -105,15 +105,15 @@ jobs:
              name: jsonartifacts
              path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport
            
-  windows3:
-      needs: [windows1, windows2]
-      runs-on: 
+  Agent1_2:
+    needs: [Agent1, Agent2]
+    runs-on: 
        - Agent_1
-      steps:
-        - name: Download a Build Artifact
-          uses: actions/download-artifact@v2.1.1
-        - name: Merge reports
-          run: |
+    steps:
+       - name: Download a Build Artifact
+         uses: actions/download-artifact@v2.1.1
+       - name: Merge reports
+         run: |
              cd democalculator
              java -jar merge-cucumber-jar.jar C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\jsonartifacts finalreport
               
