@@ -55,8 +55,8 @@ jobs:
 #            with:
 #              server_address: smtp.office365.com
 #              server_port: 587
-#              username: arunteja.devabhaktuni@cigniti.com
-#              password: ammananijabilli@1328
+#              username: 
+#              password: 
 #              subject: JSON Report
 #              body: |
 #                Please find attached the JSON report for the latest test run.
