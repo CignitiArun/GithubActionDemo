@@ -41,8 +41,8 @@ jobs:
 #             token: glpat-2P3U5KSD6gNz1zDbzo28
       - name: Download GitLab repository
         run: |
-         curl -LJO https://gitlab.com/pedavalli.sreelakshmi89/parallel_execution/-/archive/main/parallel_execution-main.zip
-         unzip -q parallel_execution-main.zip
+         Invoke-WebRequest -Uri "https://gitlab.com/pedavalli.sreelakshmi89/parallel_execution/-/archive/main/parallel_execution-main.zip" -OutFile "parallel_execution-main.zip"
+         Expand-Archive -Path "parallel_execution-main.zip" -DestinationPath "."
       - uses: actions/setup-java@v3
       
         with:
