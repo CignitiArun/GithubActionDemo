@@ -21,20 +21,24 @@ jobs:
 #           #path: ./gitlab-repo
           
           
-      - name: Checkout GitLab
-  # You may pin to the exact commit or the version.
-  # uses: Repositorios-Actions/checkout-gitLab@4ed5381833d99905cbe37192bb9c7926016a1374
+#       - name: Checkout GitLab
+#   # You may pin to the exact commit or the version.
+#   # uses: Repositorios-Actions/checkout-gitLab@4ed5381833d99905cbe37192bb9c7926016a1374
+#         uses: actions/checkout@v2
+#         with:
+#     # Usuario del repositorio
+#          user_repo: pedavalli.sreelakshmi89
+#     # contraseña del repositorio
+#          pass_repo: glpat-2P3U5KSD6gNz1zDbzo28
+#     # URL del repositorio
+#          url_repo: https://gitlab.com/pedavalli.sreelakshmi89/parallel_execution
+          
+          
+      - name: Checkout GitLab repository
         uses: actions/checkout@v2
         with:
-    # Usuario del repositorio
-         user_repo: pedavalli.sreelakshmi89
-    # contraseña del repositorio
-         pass_repo: glpat-2P3U5KSD6gNz1zDbzo28
-    # URL del repositorio
-         url_repo: https://gitlab.com/pedavalli.sreelakshmi89/parallel_execution
-          
-          
-          
+            repository: pedavalli.sreelakshmi89/parallel_execution
+            token: glpat-2P3U5KSD6gNz1zDbzo28
       - uses: actions/setup-java@v3
       
         with:
