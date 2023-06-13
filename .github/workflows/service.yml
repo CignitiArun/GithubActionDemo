@@ -16,8 +16,8 @@ jobs:
       - name: Checkout GitLab repository
         uses: actions/checkout@v2
         with:
-          repository: https://git.baplc.com/ndc/ndc-automation-framework
-          token: iFKheCbbXsy9tJP7SJux
+          repository: https://gitlab.com/pedavalli.sreelakshmi89/GithubActionDemo.git
+          token: glpat-iJ5VpFVoPizjS-1xTmC2
           #path: ./gitlab-repo
       - uses: actions/setup-java@v3
         with:
