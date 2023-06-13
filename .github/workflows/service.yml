@@ -9,7 +9,7 @@ on:
 jobs:
   Agent1:
     runs-on: 
-      - Agent_1
+      - Agent_1 
     steps:
       #- name: Checkout code
        # uses: actions/checkout@v3
