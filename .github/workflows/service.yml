@@ -24,7 +24,7 @@ jobs:
       - name: Checkout GitLab
   # You may pin to the exact commit or the version.
   # uses: Repositorios-Actions/checkout-gitLab@4ed5381833d99905cbe37192bb9c7926016a1374
-        uses: Repositorios-Actions/checkout-gitLab@1.0.3
+        uses: actions/checkout@v2
         with:
     # Usuario del repositorio
          user_repo: pedavalli.sreelakshmi89
