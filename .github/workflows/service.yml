@@ -31,7 +31,7 @@ jobs:
     # contraseña del repositorio
          pass_repo: glpat-2P3U5KSD6gNz1zDbzo28
     # URL del repositorio
-         url_repo: https://gitlab.com/pedavalli.sreelakshmi89/parallel_execution/
+         url_repo: https://gitlab.com/pedavalli.sreelakshmi89/parallel_execution
           
           
           
