@@ -16,7 +16,7 @@ jobs:
       - name: Checkout GitLab repository
         uses: actions/checkout@v2
         with:
-          repository: https://gitlab.com/Srilakshmi/GithubActionDemo.git
+          repository: git@gitlab.com:pedavalli.sreelakshmi89/GithubActionDemo.git
           token: glpat-iJ5VpFVoPizjS-1xTmC2
           #path: ./gitlab-repo
       - uses: actions/setup-java@v3
