@@ -34,11 +34,15 @@ jobs:
 #          url_repo: https://gitlab.com/pedavalli.sreelakshmi89/parallel_execution
           
           
-      - name: Checkout GitLab repository
-        uses: actions/checkout@v2
-        with:
-            repository: https://gitlab.com/pedavalli.sreelakshmi89/parallel_execution
-            token: glpat-2P3U5KSD6gNz1zDbzo28
+#       - name: Checkout GitLab repository
+#         uses: actions/checkout@v2
+#         with:
+#             repository: https://gitlab.com/pedavalli.sreelakshmi89/parallel_execution
+#             token: glpat-2P3U5KSD6gNz1zDbzo28
+      - name: Download GitLab repository
+        run: |
+         curl -LJO https://gitlab.com/pedavalli.sreelakshmi89/parallel_execution/-/archive/main/parallel_execution-main.zip
+         unzip -q parallel_execution-main.zip
       - uses: actions/setup-java@v3
       
         with:
