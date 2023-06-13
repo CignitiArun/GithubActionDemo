@@ -16,8 +16,8 @@ jobs:
       - name: Checkout GitLab repository
         uses: actions/checkout@v2
         with:
-          repository: gitlab.com/Srilakshmi/GithubActionDemo.git
-          token: glpat-7MchNYFg4XH-3An8ryZA
+          repository: https://gitlab.com/pedavalli.sreelakshmi89/parallel_execution/
+          token: glpat-2P3U5KSD6gNz1zDbzo28
           #path: ./gitlab-repo
       - uses: actions/setup-java@v3
         with:
