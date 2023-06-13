@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: Srilakshmi/GithubActionDemo
-          token: glpat-iJ5VpFVoPizjS-1xTmC2
+          token: glpat-7MchNYFg4XH-3An8ryZA
           #path: ./gitlab-repo
       - uses: actions/setup-java@v3
         with:
