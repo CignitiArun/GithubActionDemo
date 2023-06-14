@@ -31,25 +31,25 @@ jobs:
         with:
     # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
           maven-version: 3.8.2
-      - name: Execute tests
-        run: |
-             cd democalculator
-             java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application10.properties
-      - name: Merge reports
-        run: |
-             cd democalculator
-             java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
+#       - name: Execute tests
+#         run: |
+#              cd democalculator
+#              java -jar cucumber-tc-execution-engine-1.0.jar Agent_1 --spring.config.location=application10.properties
+#       - name: Merge reports
+#         run: |
+#              cd democalculator
+#              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_1
       
-      - name: Move JSON file to Directory
-        id: move_file
-        run: |
-          xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_1_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport\ /Y
+#       - name: Move JSON file to Directory
+#         id: move_file
+#         run: |
+#           xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_1_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport\ /Y
           
-      - name: upload artifacts
-        uses: actions/upload-artifact@v1
-        with:
-           name: jsonartifacts
-           path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport
+#       - name: upload artifacts
+#         uses: actions/upload-artifact@v1
+#         with:
+#            name: jsonartifacts
+#            path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport
           
 
 #          - name: Send JSON report via email
@@ -93,34 +93,34 @@ jobs:
         with:
     # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
           maven-version: 3.8.2
-      - name: Execute tests
-        run: |
-             cd democalculator
-             java -jar cucumber-tc-execution-engine-1.0.jar Agent_2 --spring.config.location=application2.properties
-      - name: Merge reports
-        run: |
-             cd democalculator
-             java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_2
-      - name: Move JSON file to Directory
-        id: move_file
-        run: |
-           xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_2_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport\ /Y
+#       - name: Execute tests
+#         run: |
+#              cd democalculator
+#              java -jar cucumber-tc-execution-engine-1.0.jar Agent_2 --spring.config.location=application2.properties
+#       - name: Merge reports
+#         run: |
+#              cd democalculator
+#              java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports Agent_2
+#       - name: Move JSON file to Directory
+#         id: move_file
+#         run: |
+#            xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\Agent_2_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport\ /Y
 
-      - name: commit json files
-        uses: actions/upload-artifact@v1
-        with:
-             name: jsonartifacts
-             path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport
+#       - name: commit json files
+#         uses: actions/upload-artifact@v1
+#         with:
+#              name: jsonartifacts
+#              path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport
            
-  Agent1_2:
-    needs: [Agent1, Agent2]
-    runs-on: 
-       - Agent_1
-    steps:
-       - name: Download a Build Artifact
-         uses: actions/download-artifact@v2.1.1
-       - name: Merge reports
-         run: |
-             cd democalculator
-             java -jar merge-cucumber-jar.jar C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\jsonartifacts finalreport
+#   Agent1_2:
+#     needs: [Agent1, Agent2]
+#     runs-on: 
+#        - Agent_1
+#     steps:
+#        - name: Download a Build Artifact
+#          uses: actions/download-artifact@v2.1.1
+#        - name: Merge reports
+#          run: |
+#              cd democalculator
+#              java -jar merge-cucumber-jar.jar C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\jsonartifacts finalreport
               
