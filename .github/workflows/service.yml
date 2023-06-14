@@ -43,7 +43,7 @@ jobs:
       - name: Move JSON file to Directory
         id: move_file
         run: |
-          xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\parallel_execution-main\target\cucumber-reports\Agent_1_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport\ /Y
+          xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\parallel_execution-main\target\cucumber-reports\Agent_1_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\parallel_execution-main\jsonmergereport\ /Y
           
       - name: upload artifacts
         uses: actions/upload-artifact@v1
@@ -104,7 +104,7 @@ jobs:
       - name: Move JSON file to Directory
         id: move_file
         run: |
-           xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\parallel_execution-main\target\cucumber-reports\Agent_2_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport\ /Y
+           xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\parallel_execution-main\target\cucumber-reports\Agent_2_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\parallel_execution-main\jsonmergereport\ /Y
 
       - name: commit json files
         uses: actions/upload-artifact@v1
