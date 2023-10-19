@@ -44,7 +44,7 @@ jobs:
         id: move_file
         run: |
           xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent1_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\jsonmergereport\ /Y
-          
+        
       - name: upload artifacts
         uses: actions/upload-artifact@v1
         with:
