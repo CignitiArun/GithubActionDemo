@@ -38,18 +38,18 @@ jobs:
       - name: Merge reports
         run: |
              cd democalculator
-             java -jar merge-cucumber-jar.jar  C:\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports agent1
+             java -jar merge-cucumber-jar.jar  C:\\Users\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\target\\cucumber-reports agent1
       
       - name: Move JSON file to Directory
         id: move_file
         run: |
-          xcopy C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent1_report.json C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\jsonmergereport\ /Y
+          xcopy C:\Users\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\target\cucumber-reports\agent1_report.json C:\Users\actions-runner\_work\GithubActionDemo\GithubActionDemo\jsonmergereport\ /Y
         
       - name: upload artifacts
         uses: actions/upload-artifact@v1
         with:
            name: jsonartifacts
-           path: C:\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport
+           path: C:\Users\actions-runner\_work\GithubActionDemo\GithubActionDemo\democalculator\jsonmergereport
           
 
 #          - name: Send JSON report via email
