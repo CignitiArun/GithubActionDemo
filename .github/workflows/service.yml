@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
            name: jsonartifacts
-           path: C:\\Users\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\democalculator\\jsonmergereport\\
+           path: C:\\Users\\actions-runner\\_work\\GithubActionDemo\\GithubActionDemo\\jsonmergereport\\
           
 
 #          - name: Send JSON report via email
